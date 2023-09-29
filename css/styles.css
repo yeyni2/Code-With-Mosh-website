@@ -2,11 +2,15 @@
 /* typography */
 
 :root {
-    --color-primaty: #2584ff;
+    --color-primary: #2584ff;
     --color-seconadry: #00d9ff;
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918c84;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 html {
@@ -97,7 +101,7 @@ a {
 }
 
 .badge--primary {
-    background: var(--color-primaty);
+    background: var(--color-primary);
     color: white;
 }
 .badge--seocndary {
@@ -155,7 +159,7 @@ a {
 }
 
 .icon--primary {
-    fill: var(--color-primaty);
+    fill: var(--color-primary);
 }
 
 .icon-container {
@@ -172,23 +176,64 @@ a {
 /* Buttons */
 
 .btn {
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    border-radius: 5rem;
-    padding: 1rem 2rem;
+    border-radius: 4rem;
+    border: 0;
     cursor: pointer;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .btn--block {
     width: 100%;
+    display: inline-block;
 }
 
 .btn--outline {
+    background: transparent;
+    color: var(--color-headings);
+    border: 2px solid var(--color-headings);
+}
 
+.btn--outline:hover {
+    background: var(--color-primary);
+    color: #fff;
 }
 
 .btn--primary {
-    /* orenge like color  */
+    background: var(--color-primary);
+    color: white;
 }
+
+.btn--primary:hover {
+    background: #3a8ddf
+}
+
 .btn--seocndary {
-    /* lightblue like color */
+    background: var(--color-seconadry);
+    color: white;
+}
+
+.btn--seocndary:hover {
+    background: #00c8eb
+}
+
+.btn--accent {
+background: var(--color-accent);
+color: #fff;
+}
+
+.btn--accent:hover {
+    background: #ec3000
+}
+
+@media screen and (min-width: 1024px){
+    .btn {
+        font-size: 1.5rem;
+    }
 }
