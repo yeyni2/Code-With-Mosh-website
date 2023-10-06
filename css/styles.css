@@ -206,9 +206,31 @@ a {
     white-space: nowrap;
 }
 
-.btn--block {
-    width: 100%;
-    display: inline-block;
+.btn--primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.btn--primary:hover {
+    background: #3a8ddf
+}
+
+.btn--secondary {
+    background: var(--color-secondary);
+    color: white;
+}
+
+.btn--secondary:hover {
+    background: #00c8eb
+}
+
+.btn--accent {
+background: var(--color-accent);
+color: #fff;
+}
+
+.btn--accent:hover {
+    background: #ec3000
 }
 
 .btn--outline {
@@ -225,31 +247,14 @@ a {
     color: #fff;
 }
 
-.btn--primary {
-    background: var(--color-primary);
-    color: white;
+.btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
-.btn--primary:hover {
-    background: #3a8ddf
-}
-
-.btn--seocndary {
-    background: var(--color-secondary);
-    color: white;
-}
-
-.btn--seocndary:hover {
-    background: #00c8eb
-}
-
-.btn--accent {
-background: var(--color-accent);
-color: #fff;
-}
-
-.btn--accent:hover {
-    background: #ec3000
+.btn--block {
+    width: 100%;
+    display: inline-block;
 }
 
 @media screen and (min-width: 1024px){
@@ -508,3 +513,44 @@ color: #fff;
     }
 }
 
+/* Callouts */
+
+.callout {
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.callout__heading {
+    color: #fff;
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.callout .btn {
+    justify-self: center;
+    align-self: center;
+}
+
+.callout__content {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .callout .grid--1x2 {
+        grid-template-columns: 1fr auto ;
+    }
+
+    .callout__content {
+        text-align: left;
+    }
+    
+    .callout .btn {
+        justify-self: start;
+        margin: 0 2rem;
+    }
+}
